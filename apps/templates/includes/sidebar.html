@@ -1,14 +1,19 @@
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href="/">
-        <img src="{{ ASSETS_ROOT }}/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Soft UI Dashboard</span>
-      </a>
-    </div>
+    
+  <!-- JOBREV DASHBOARD -->
+  <div class="sidenav-header">
+    <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+    <a class="navbar-brand m-0" href="/">
+      <img src="{{ ASSETS_ROOT }}/img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
+      <span class="ms-1 font-weight-bold">JobRev Dashboard</span>
+    </a>
+  </div>
+
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
+
+        <!-- DASHBOARD -->
         <li class="nav-item">
           <a class="nav-link {% if 'index' in segment %} active {% endif %}" href="/index.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -29,6 +34,8 @@
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
+
+        <!-- TABLES -->
         <li class="nav-item">
           <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="/tables.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -49,7 +56,9 @@
             <span class="nav-link-text ms-1">Tables</span>
           </a>
         </li>
-        <li class="nav-item">
+
+        <!-- BILLING -->
+        <!-- <li class="nav-item">
           <a class="nav-link {% if 'billing' in segment %} active {% endif %}" href="/billing.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -68,8 +77,10 @@
             </div>
             <span class="nav-link-text ms-1">Billing</span>
           </a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+
+        <!-- VIRTUAL REALITY-->
+        <!-- <li class="nav-item">
           <a class="nav-link {% if 'virtual-reality' in segment %} active {% endif %}" href="/virtual-reality.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -89,8 +100,10 @@
             </div>
             <span class="nav-link-text ms-1">Virtual Reality</span>
           </a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+
+        <!-- RTL SUPPORT-->
+        <!-- <li class="nav-item"> 
           <a class="nav-link {% if 'rtl' in segment %} active {% endif %}" href="/rtl.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -110,10 +123,13 @@
             </div>
             <span class="nav-link-text ms-1">RTL</span>
           </a>
-        </li>
+        </li> -->
+
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
         </li>
+
+        <!-- PROFILE-->
         <li class="nav-item">
           <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/profile.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -135,7 +151,9 @@
             <span class="nav-link-text ms-1">Profile</span>
           </a>
         </li>
-        <li class="nav-item">
+
+        <!-- SIGN IN TEMPLATE-->
+        <!-- <li class="nav-item">
           <a class="nav-link  " href="/sign-in.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -154,8 +172,10 @@
             </div>
             <span class="nav-link-text ms-1">Sign In (template)</span>
           </a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+
+        <!-- SIGN UP TEMPLATE-->
+        <!-- <li class="nav-item">
           <a class="nav-link  " href="/sign-up.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -176,10 +196,12 @@
             </div>
             <span class="nav-link-text ms-1">Sign Up (template)</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
-    <div class="sidenav-footer mx-3 ">
+
+    <!-- CONTACT SUPPORT -->
+    <!-- <div class="sidenav-footer mx-3 ">
       <div class="card card-background shadow-none card-background-mask-secondary" id="sidenavCard">
         <div class="full-background" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/white-curved.jpg')"></div>
         <div class="card-body text-start p-3 w-100">
@@ -194,5 +216,5 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </aside>
