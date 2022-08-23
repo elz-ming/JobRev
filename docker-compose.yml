@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   appseed-app:
     container_name: appseed_app
@@ -20,6 +21,16 @@ services:
       - web_network
     depends_on: 
       - appseed-app
+  webapp:
+    build: .
+    container_name: django-crypto
+    volumes:
+      - ./app:/usr/src/app
+    env_file: .env
+    ports:
+      - 8000:8000
+
+
 networks:
   db_network:
     driver: bridge

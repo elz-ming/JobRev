@@ -3,7 +3,8 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-import os, environ
+import os
+import environ
 
 env = environ.Env(
     # set casting, default value
@@ -41,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.admus',
-    'apps.home'  # Enable the inner home (home)
+    'apps.home',  # Enable the inner home (home)
+    'django_crontab',
+    'django_cron',
 ]
 
 MIDDLEWARE = [
@@ -147,6 +150,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
+
+CRONJOBS = [
+    ('* * * * *', 'apps.rscraper.cron.cron_job')
+]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #############################################################
 #############################################################
