@@ -12,5 +12,5 @@ class AdmusConfig(AppConfig):
     label = 'apps_admus'
     
     def ready(self):
-        from apps.jsscraper import updater
+        from apps.scraper import updater
         updater.start()

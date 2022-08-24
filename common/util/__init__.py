@@ -1,12 +1,13 @@
 ## Helper functions
+import time
+
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-from bs4 import BeautifulSoup
-import pandas as pd
-import requests
-import time
 
 ## This function will automatically run click load more in the url attached below
 ## After no more button, we need manually inspect the source code and copy the html to txt file

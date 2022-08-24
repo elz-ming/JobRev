@@ -1,0 +1,1 @@
+"C:\\Users\\DS\\anaconda3\\python.exe" "D:\01-DS\Y-SideProject\JobRev-B\common\JupyNote\reddit_scraper.py"

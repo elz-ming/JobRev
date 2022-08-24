@@ -10,5 +10,5 @@ class MyConfig(AppConfig):
     label = 'apps_home'
 
     def ready(self):
-        from apps.jsscraper import updater
+        from apps.scraper import updater
         updater.start()
