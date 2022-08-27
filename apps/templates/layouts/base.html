@@ -41,7 +41,16 @@
   <!-- Specific CSS goes HERE -->
   {% block stylesheets %}{% endblock stylesheets %}  
 
+  {% load static %}  
+  <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+  <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.charts.js" %}"></script>
+  <script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fusion.js" %}"></script>
+  <script src="{% static "fusioncharts/fusioncharts.maps.js" %}"></script>
+  <script src="{% static "fusioncharts/maps/fusioncharts.world.js" %}"></script>
+  <script src="{% static "fusioncharts/maps/fusioncharts.california.js" %}"></script>
+  <script src="{% static "fusioncharts/maps/fusioncharts.malaysia.js" %}"></script>
 </head>
+
 <body class="g-sidenav-show  bg-gray-100">
   
   {% include "includes/sidebar.html" %} 
@@ -76,6 +85,6 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>  
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{ ASSETS_ROOT }}/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
-
+  
 </body>
 </html>

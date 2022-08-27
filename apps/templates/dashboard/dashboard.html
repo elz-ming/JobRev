@@ -1,0 +1,79 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <div class="container-fluid py-4">
+
+            <!-- FIRST ROW -->
+            <div class="row">
+                <!-- FIRST BLOCK -->
+                <div class="col-md-12 col-sm-12 mb-xl-0 mb-4">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-xl-8 col-sm-6 mb-xl-0 mb-4">
+                                <div class="card-body">
+                                    <div style="display:inline-block" id="mySecondchart-container">{{ output2 |safe }}</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4 py-2 me-auto">
+                                <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('{{ ASSETS_ROOT }}/img/twinTower.jpg');">
+                                    <span class="mask bg-gradient-faded-dark"></span>
+                                    <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                                      <h3 class="text-white font-weight-bolder mb-4 pt-2">MALAYSIA HEATMAP</h3>
+                                      <p class="text-white">
+                                        From our research of a total of 7000+ companies listed on JobStreet, we came out with a Malaysia Heatmap to show that: <br><br>
+                                        - Kuala Lumpur and Selangor are the hottest areas filled with companies <br><br>
+                                        - Penang and Johor are the next hot spot for companies to setup their headquarters / branchese <br><br>
+                                        - The other states in Malaysia have relatively less company offices setup there <br><br>
+                                        (In depth analysis at below)
+                                      </p>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECOND ROW -->
+            <div class="row mt-4">
+                <!-- FIRST BLOCK -->
+                <div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-xl-8 col-sm-6 mb-xl-0 mb-4">
+                                <div class="card-body">
+                                    <div style="display:inline-block" id="myFirstchart-container">{{ output |safe }}</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6 mb-xl-0 mb-4 py-2 me-auto">
+                                <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('{{ ASSETS_ROOT }}/img/calculator.jfif');">
+                                    <span class="mask bg-gradient-light"></span>
+                                    <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+                                      <h3 class="text-dark font-weight-bolder mb-4 pt-2">Bar Chart</h3>
+                                      <p class="text-dark">
+                                        From this bar chart we can see that: <br><br>
+                                        - Kuala Lumpur and Selangor are states with more than 1500 companies <br><br>
+                                        - Penang and Johor are states with more than 500 companies <br><br>
+                                        - 7 of the remaining states each has between 50 to 200 companies <br><br>
+                                        - An interesting fact is that there is actually Singapore Companies listed in Malaysia Jobstreet Website!
+                                      </p>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        </div>
+        {% include "includes/footer.html" %}
+
+    </div>
+{% endblock content %}
