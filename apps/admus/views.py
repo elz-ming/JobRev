@@ -18,17 +18,13 @@ from apps.admus.forms import LoginForm, SignUpForm
 
 # ========== VIEWS ========== #
 
-@login_required
-def index(request):
-    return render(request,'admus/index.html')
-
 @login_required(login_url="/login/")
-def user_logout(request):
+def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('login'))
 
 
-def login_view(request):
+def login_user(request):
     form = LoginForm(request.POST or None)
     msg = None
     if request.method == "POST":
@@ -70,27 +66,3 @@ def register_user(request):
     return render(request, "admus/register.html", {"form": form, "msg": msg, "success": success})
 
 
-@login_required(login_url="/login/")
-def pages(request):
-    context = {}
-    # All resource paths end in .html.
-    # Pick out the html file name from the url. And load that template.
-    try:
-
-        load_template = request.path.split('/')[-1]
-
-        if load_template == 'admin':
-            return HttpResponseRedirect(reverse('admin:index'))
-        context['segment'] = load_template
-
-        html_template = loader.get_template('home/' + load_template)
-        return HttpResponse(html_template.render(context, request))
-
-    except template.TemplateDoesNotExist:
-
-        html_template = loader.get_template('home/page-404.html')
-        return HttpResponse(html_template.render(context, request))
-
-    except:
-        html_template = loader.get_template('home/page-500.html')
-        return HttpResponse(html_template.render(context, request))

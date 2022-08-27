@@ -42,9 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.admus',
-    'apps.home',  # Enable the inner home (home)
-    'django_crontab',
-    'django_cron',
+    'apps.dashboard',  # Enable the inner home (home)
 ]
 
 MIDDLEWARE = [
