@@ -11,7 +11,6 @@ from django import template
 from django.template import loader
 
 
-
 @login_required(login_url="/login/")
 def index(request):
     return render(request,'dashboard/index.html')
@@ -73,7 +72,7 @@ x3 = [value for value in df_companies_state_id["value_label"]]
 mapArray = list(map(list,zip(x,x2,x3)))
 
 @login_required(login_url="/login/")
-def dashboard(request):
+def dashboard1(request):
 
     # Chart 1
     dataSource = OrderedDict()
@@ -155,7 +154,21 @@ def dashboard(request):
     fusionMap = FusionCharts("maps/malaysia", "myFirstMap", "800",
                             "600", "mySecondchart-container", "json", dataSourceMap)
 
-    return render(request, 'dashboard/dashboard.html', {
+    return render(request, 'dashboard/dashboard1.html', {
         'output': column2D.render(),    
         'output2': fusionMap.render(),
     })
+
+df.rename(columns = {'Unnamed: 0':'company_id'}, inplace = True)
+
+def dashboard2(request):
+    company_id = df["company_id"].tolist()
+    company_name = df["company_name"].tolist()
+    company_rating = df["company_rating"].tolist()
+    salary_rate = df["salary_rate"].tolist()
+    recommendation_rate = df["recommendation_rate"].tolist()
+    company_benefit = df["company_benefit"].tolist()
+
+    context = {'LUnique': zip(company_id, company_name, company_rating, salary_rate, recommendation_rate, company_benefit)}
+
+    return render(request, "dashboard/dashboard2.html", context=context)
