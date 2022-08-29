@@ -54,6 +54,11 @@ def register_user(request):
 
             msg = 'User created successfully.'
             success = True
+<<<<<<< HEAD
+=======
+        else:
+            msg = 'Invalid form'
+>>>>>>> developer
 
             return redirect("/login/")
             
