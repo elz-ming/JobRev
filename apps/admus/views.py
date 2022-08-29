@@ -10,8 +10,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-from django import template
-from django.template import loader
 
 from django.contrib.auth.models import User
 from apps.admus.forms import LoginForm, SignUpForm
@@ -33,11 +31,8 @@ def login_user(request):
             password = form.cleaned_data.get("password")
             user = authenticate(username=username, password=password)
             if user:
-                if user.is_active:
-                    login(request, user)
-                    return HttpResponseRedirect(reverse('index'))
-                else:
-                    msg = 'Your account was inactive'
+                login(request, user)
+                return HttpResponseRedirect(reverse('index'))
             else:
                 msg = 'Invalid credentials'
         else:
@@ -57,10 +52,13 @@ def register_user(request):
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
 
-        msg = 'User created successfully.'
-        success = True
+            msg = 'User created successfully.'
+            success = True
 
-        # return redirect("/login/")
+            return redirect("/login/")
+            
+        else:
+            msg = 'For is not valid'
     else:
         form = SignUpForm()
 
