@@ -10,3 +10,8 @@ We here provided a solution that could help solve the concerns of many jobseeker
 
 ## YouTube Video
 https://youtu.be/DmzPKLNpp6E
+
+## Contacts
+**Edmund Lin** >>> https://www.linkedin.com/in/edmund-lin-8710331b9/
+
+**Nicky Tan** >>> https://www.linkedin.com/in/nicky-tan-050728152/
